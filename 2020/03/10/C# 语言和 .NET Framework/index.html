@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        C# 语言和 .NET Framework - undefined
         
     </title>
 
@@ -69,7 +69,7 @@
                     <span>标签</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
                     <span>存档</span>
@@ -84,6 +84,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NetFramework的组成"><span class="toc-text">.NetFramework的组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-代码执行过程"><span class="toc-text">C#代码执行过程</span></a></li></ol>
+</div>
     
 </div>
 
@@ -111,110 +115,57 @@
         
 
 
-<!-- 归档列表 -->
+<div class="post-container">
+    <div class="post-title">
+        C# 语言和 .NET Framework
+    </div>
 
-<div class="archives-container">
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-03-10 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#C#" title="C#">C#</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="NetFramework的组成"><a href="#NetFramework的组成" class="headerlink" title=".NetFramework的组成"></a>.NetFramework的组成</h2><ul>
+<li><p>公共语言运行时（Common LanguageRuntime,CLR）</p>
+<blockquote>
+<p>它提供了内存管理、线程管理和异常处理等服务，并负责对代码实施严格的类型安全检查</p>
+</blockquote>
+<blockquote>
+<p>我们将受CLR管理的代码成为托管代码，不受CLR管理的代码称为非托管代码</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>通用类型系统（CTS）<br>CTS用于解决不同语言之间数据类型不同的问题</li>
+<li>公共语言规范（CLS）<br>CLS用于解决语言规范</li>
+</ul>
+</blockquote>
+</li>
+<li><p>和.Net Framework类库（Framework ClassLibrary,FCL）</p>
+</li>
+</ul>
+<hr>
+<h2 id="C-代码执行过程"><a href="#C-代码执行过程" class="headerlink" title="C#代码执行过程"></a>C#代码执行过程</h2><p>当C#程序执行时，程序集<code>程序集包含一个介绍程序集的类型、版本、区域性和安全要求的清单</code>会加载到CLR中,可能根据清单中的信息执行各种操作。然后，如果满足安全要求，CLR会直接执行实时 (JIT) 编译，将IL代码转换成本机指令。CLR还提供其他与自动垃圾回收、异常处理和资源管理相关的服务。<br>执行本机代码，JIT编译生成本机代码之后，编译好的本机代码会被放置到一个缓冲区，下次再调用相同的代码时，可以直接运行缓冲区的现有的本机代码，从而避免重新验证IL代码以及把它编译为本机代码的过程。使用这种方式，只有JIT发生的时候才有一定的性能损失。</p>
 
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-    <ul>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-23</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/23/类的成员/">
-                        <span>
-                            类的成员
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-20</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/20/结构体/">
-                        <span>
-                            结构体
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-20</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/20/OOP（Object Oriented Programming）/">
-                        <span>
-                            OOP（Object Oriented Programming）
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-16</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/16/接口/">
-                        <span>
-                            接口
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-11</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/11/C#类型系统/">
-                        <span>
-                            C#类型系统
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-10</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/10/C# 语言和 .NET Framework/">
-                        <span>
-                            C# 语言和 .NET Framework
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
 
-    </ul>
-</div>
+        <div id="lv-container">
+        </div>
 
+    </div>
 </div>
 
     </div>
@@ -255,7 +206,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 

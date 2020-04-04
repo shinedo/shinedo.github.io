@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        结构体 - undefined
         
     </title>
 
@@ -69,7 +69,7 @@
                     <span>标签</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
                     <span>存档</span>
@@ -84,6 +84,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-结构体的特点"><span class="toc-text">C#结构体的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类VS结构"><span class="toc-text">类VS结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用区别"><span class="toc-text">使用区别</span></a></li></ol>
+</div>
     
 </div>
 
@@ -111,110 +115,63 @@
         
 
 
-<!-- 归档列表 -->
+<div class="post-container">
+    <div class="post-title">
+        结构体
+    </div>
 
-<div class="archives-container">
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-03-20 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#C#" title="C#">C#</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="C-结构体的特点"><a href="#C-结构体的特点" class="headerlink" title="C#结构体的特点"></a>C#结构体的特点</h2><ul>
+<li>结构可带有方法、字段、索引、属性、运算符方法和事件</li>
+<li>结构可定义构造函数，但不能定义析构函数<blockquote>
+<p>不能为结构图定义无参构造函数。无参构造函数是自动定义的，且不能被改变</p>
+</blockquote>
+</li>
+<li>与类不同，结构不能继承其他的结构或类</li>
+<li>结构体不能被继承</li>
+<li>结构体可实现一个或多个接口</li>
+<li>结构成员不能指定为abstract、virtual或protected</li>
+<li>当您使用New操作符创建结构对象时，会调用适当的结构函数来创建结构体。可以不适用New即可被实例化</li>
+</ul>
+<h2 id="类VS结构"><a href="#类VS结构" class="headerlink" title="类VS结构"></a>类VS结构</h2><ul>
+<li>类是引用类型，结构体是值类型</li>
+<li>不能使用abstract或者sealed修饰，类可以</li>
+<li>结构不支持继承</li>
+<li>结构不能声明默认的构造函数</li>
+<li>结构体不能定义析构函数，类可以</li>
+<li>创建实例对象时结构体可以不使用New,类必须使用</li>
+</ul>
+<h2 id="使用区别"><a href="#使用区别" class="headerlink" title="使用区别"></a>使用区别</h2><blockquote>
+<p>结构体就是数据变量的容器，描述一个轻量级对象的时候，定义结构体来提升效率</p>
+<blockquote>
+<p>结构体存储在栈中，而栈有1个特点就是空间较小，但是访问速度较快<br>当描述一个重量级、有大量的逻辑对象时，创建类比结构好<br>堆空间较大，但是访问速度相对较慢</p>
+</blockquote>
+</blockquote>
 
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-    <ul>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-23</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/23/类的成员/">
-                        <span>
-                            类的成员
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-20</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/20/结构体/">
-                        <span>
-                            结构体
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-20</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/20/OOP（Object Oriented Programming）/">
-                        <span>
-                            OOP（Object Oriented Programming）
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-16</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/16/接口/">
-                        <span>
-                            接口
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-11</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/11/C#类型系统/">
-                        <span>
-                            C#类型系统
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>03-10</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2020/03/10/C# 语言和 .NET Framework/">
-                        <span>
-                            C# 语言和 .NET Framework
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
 
-    </ul>
-</div>
+        <div id="lv-container">
+        </div>
 
+    </div>
 </div>
 
     </div>
@@ -255,7 +212,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
