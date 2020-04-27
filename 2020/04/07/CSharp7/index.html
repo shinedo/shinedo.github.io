@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="一剑横空向巅峰，生死胜败转头空。&lt;br&gt;天涯何处知音赏, 欲回首时已忘情">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        委托与事件 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 一剑横空向巅峰，生死胜败转头空。天涯何处知音赏, 欲回首时已忘情 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/favicon.ico" />
+        </div>
+        <div class="name">
+            <i>Shinedo</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#委托委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。"><span class="toc-text">委托委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件事件涉及两类角色－事件发布者和事件订阅者"><span class="toc-text">事件事件涉及两类角色－事件发布者和事件订阅者</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#委托与事件的区别"><span class="toc-text">委托与事件的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Action"><span class="toc-text">Action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fun"><span class="toc-text">Fun</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 一剑横空向巅峰，生死胜败转头空。天涯何处知音赏, 欲回首时已忘情 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        委托与事件
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-04-07 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#C#" title="C#">C#</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h3 id="委托委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。"><a href="#委托委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。" class="headerlink" title="委托委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。"></a>委托<code>委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。</code></h3><blockquote>
+<p>定义<br> <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">int</span> <span class="title">MyDelegate</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span>;</span><br></pre></td></tr></table></figure><br>能够被委托包装的方法所要满足的必要条件：</p>
+</blockquote>
+<ol>
+<li>方法的返回值类型必须与委托相同</li>
+<li>方法的参数列表必须与委托相同<blockquote>
+<p>委托的多播</p>
+</blockquote>
+</li>
+</ol>
+<p>委托对象可使用 “+” 运算符进行合并。一个合并委托调用它所合并的两个委托。只有相同类型的委托可被合并。”-“ 运算符可用于从合并的委托中移除组件委托。<br>使用委托的这个有用的特点，您可以创建一个委托被调用时要调用的方法的调用列表。这被称为委托的 多播（multicasting），也叫组播。</p>
+<blockquote>
+<p>委托链   </p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">void</span> <span class="title">DelegateTest</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="comment">//用静态方法来实例化委托</span></span><br><span class="line">    DelegateTest dtstatic = <span class="keyword">new</span> DelegateTest(Program.method1);</span><br><span class="line"></span><br><span class="line">    DelegateTest dtinstance = <span class="keyword">new</span> DelegateTest(<span class="keyword">new</span> Program().method2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义一个委托对象，一开始初始化为null，即不代表任何方法。</span></span><br><span class="line">    DelegateTest delegatechain = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用 “+”符号链接委托，链接多个委托后就成为了委托链</span></span><br><span class="line">    delegatechain += dtstatic;</span><br><span class="line">    delegatechain += dtinstance;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用 “-”运算符 移除委托 </span></span><br><span class="line">    delegatechain -= dtstatic;</span><br><span class="line">    <span class="comment">//调用委托链</span></span><br><span class="line">    delegatechain();</span><br><span class="line">    Console.Read();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"这是静态方法"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实例方法</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     Console.WriteLine(<span class="string">"这是实例方法"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>匿名方法与Lambda表达式声明并实例化委托</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名方法实现</span></span><br><span class="line">Del del3 = <span class="keyword">delegate</span>(<span class="keyword">string</span> name)</span><br><span class="line">    &#123; Console.WriteLine(<span class="string">$"Notification received for: <span class="subst">&#123;name&#125;</span>"</span>); &#125;;</span><br><span class="line">del3?.Invoke(<span class="string">"name"</span>);</span><br><span class="line"><span class="comment">//lambda表达式实现    </span></span><br><span class="line">Del del4 = name =&gt;  &#123; Console.WriteLine(<span class="string">$"Notification received for: <span class="subst">&#123;name&#125;</span>"</span>); &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件事件涉及两类角色－事件发布者和事件订阅者"><a href="#事件事件涉及两类角色－事件发布者和事件订阅者" class="headerlink" title="事件事件涉及两类角色－事件发布者和事件订阅者"></a>事件<code>事件涉及两类角色－事件发布者和事件订阅者</code></h3><blockquote>
+<p>定义</p>
+</blockquote>
+<p>访问修饰符 event 委托类型 事件名<br>public event EventHandler birthday</p>
+<p>事件订阅者需要订阅事件发布者发布的事件，以便在事件被触发时接收消息并且做出处理。我们可以使用+=来订阅事件，使用-=来 取消订阅事件。 </p>
+<h3 id="委托与事件的区别"><a href="#委托与事件的区别" class="headerlink" title="委托与事件的区别"></a>委托与事件的区别</h3><ol>
+<li>事件基于委托，为委托提供发布、订阅机制</li>
+<li>事件是一种特殊的委托</li>
+<li>事件只能在方法的外部声明，委托在方法外部和内部都可以声明</li>
+<li>事件只能在方法的内部触发，委托在方法外部和内部都可以触发</li>
+<li>委托一般用于回调，事件则用于外部接口。例如在观察者模式中可以声明一个事件作为外部观察者注册的接口，同时这个事件只能在被观察者内部触发，保证了其安全性</li>
+</ol>
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><blockquote>
+<p>Action<t> 封装一个方法，该方法只采用一个参数并且不返回值。</p>
+</blockquote>
+<p>Action：无参数无返回值委托。<br>Action<T>：泛型委托，无返回值，根据输入参数的个数不同有十六个重载。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Action&lt;<span class="keyword">string</span>&gt; action = <span class="keyword">delegate</span> (<span class="keyword">string</span> name) &#123; Debug.Log(name); &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Fun"><a href="#Fun" class="headerlink" title="Fun"></a>Fun</h3><p>Func&lt; out T&gt;：无输入参数，有返回值。<br>Func&lt;in T,out T&gt;：有输入参数，有返回值，根据输入参数个数不同，有十六个重载。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Func&lt;<span class="keyword">int</span>, <span class="keyword">bool</span>&gt; func = <span class="keyword">delegate</span> (<span class="keyword">int</span> a) &#123; <span class="keyword">return</span> a &gt; <span class="number">3</span>; &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Action和Func中可以使用Lambda和匿名方法处理方法体内逻辑。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud" target="_blank" rel="noopener">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

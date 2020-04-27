@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="一剑横空向巅峰，生死胜败转头空。&lt;br&gt;天涯何处知音赏, 欲回首时已忘情">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        C#的一些关键字 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 一剑横空向巅峰，生死胜败转头空。天涯何处知音赏, 欲回首时已忘情 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/favicon.ico" />
+        </div>
+        <div class="name">
+            <i>Shinedo</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ref和out区别"><span class="toc-text">ref和out区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#var"><span class="toc-text">var</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#async"><span class="toc-text">async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const"><span class="toc-text">const</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#readonly"><span class="toc-text">readonly</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in"><span class="toc-text">in</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unsafe"><span class="toc-text">unsafe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#volatile"><span class="toc-text">volatile</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 一剑横空向巅峰，生死胜败转头空。天涯何处知音赏, 欲回首时已忘情 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        C#的一些关键字
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-04-23 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#C#" title="C#">C#</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="ref和out区别"><a href="#ref和out区别" class="headerlink" title="ref和out区别"></a>ref和out区别</h2><blockquote>
+<p>ref是有出有进，out则是只出不进<br>在使用时，都需要在方法定义和调用方法时都必须显示使用关键字，ref在传递前需要初始化</p>
+<blockquote>
+<p>ref镖视参数传递时按引用传递</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;<span class="function"><span class="keyword">void</span> <span class="title">Swap</span>(<span class="params"><span class="keyword">ref</span> <span class="keyword">int</span> a,<span class="keyword">ref</span> <span class="keyword">int</span> b</span>)</span></span><br><span class="line"><span class="function">&gt;&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">int</span> t = a;</span><br><span class="line">   a = b;</span><br><span class="line">   b = t;</span><br><span class="line">&gt;&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>out 一般是用作函数返回多个值时使用</p>
+</blockquote>
+</blockquote>
+<h2 id="var"><a href="#var" class="headerlink" title="var"></a>var</h2><blockquote>
+<p>隐式“类型”</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">string</span>[] words = &#123; <span class="string">"apple"</span>, <span class="string">"strawberry"</span>, <span class="string">"grape"</span>, <span class="string">"peach"</span>, <span class="string">"banana"</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> wordQuery = <span class="keyword">from</span> word <span class="keyword">in</span> words</span><br><span class="line">                <span class="keyword">where</span> word[<span class="number">0</span>] == <span class="string">'g'</span></span><br><span class="line">                <span class="keyword">select</span> word;</span><br><span class="line">                </span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> custQuery)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"Name=&#123;0&#125;, Phone=&#123;1&#125;"</span>, item.Name, item.Phone);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="async"><a href="#async" class="headerlink" title="async"></a>async</h2><blockquote>
+<p>使用 async 修饰符可将方法、lambda表达式或匿名方法指定为异步。如果对方法或表达式使用此修饰符，则其称为异步方法 。</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;<span class="keyword">int</span>&gt; <span class="title">ExampleMethodAsync</span>(<span class="params"></span>)  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="comment">// . . . .  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><blockquote>
+<p>使用 const 关键字来声明某个常量字段或常量局部变量</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> X = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">const</span> <span class="keyword">string</span> ProductName = <span class="string">"Visual C#"</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="readonly"><a href="#readonly" class="headerlink" title="readonly"></a>readonly</h2><blockquote>
+<p>readonly 关键字不同于 const 关键字。 const 字段只能在该字段的声明中初始化。 可以在字段声明和任何构造函数中多次分配 readonly 字段。 因此，根据所使用的构造函数，readonly 字段可能具有不同的值。 另外，虽然 const 字段是编译时常量，但 readonly 字段可用于运行时常量</p>
+</blockquote>
+<h2 id="in"><a href="#in" class="headerlink" title="in"></a>in</h2><blockquote>
+<p>用于遍历迭代器</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] fibarray = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span> &#125;;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">int</span> element <span class="keyword">in</span> fibarray)</span><br><span class="line">&#123;</span><br><span class="line">    System.Console.WriteLine(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在linq或linq中的join in中</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> innerJoinQuery =</span><br><span class="line">    <span class="keyword">from</span> category <span class="keyword">in</span> categories</span><br><span class="line">    <span class="keyword">join</span> prod <span class="keyword">in</span> products <span class="keyword">on</span> category.ID <span class="keyword">equals</span> prod.CategoryID</span><br><span class="line">    <span class="keyword">select</span> <span class="keyword">new</span> &#123; ProductName = prod.Name, Category = category.Name &#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>in逆变性：基类隐式的转化为派生类<br>out协变性：派生类转换为积累</p>
+</blockquote>
+<h2 id="unsafe"><a href="#unsafe" class="headerlink" title="unsafe"></a>unsafe</h2><blockquote>
+<p>unsafe 关键字表示不安全上下文，该上下文是任何涉及指针的操作所必需的</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">unsafe</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">FastCopy</span> (<span class="params"> <span class="keyword">byte</span>* ps, <span class="keyword">byte</span>* pd, <span class="keyword">int</span> count </span>)</span> &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><blockquote>
+<p>volatile 关键字指示一个字段可以由多个同时执行的线程修改</p>
+</blockquote>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud" target="_blank" rel="noopener">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
