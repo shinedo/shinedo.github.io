@@ -159,7 +159,7 @@
 </blockquote>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i= <span class="number">123</span>；</span><br><span class="line"><span class="keyword">object</span> o = i;</span><br><span class="line">i = (<span class="keyword">int</span>)o;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>性能影</p>
+<p>性能影响</p>
 <blockquote>
 <p>如果值类型必须被频繁装箱，那么在这些情况下最好避免使用值类型（例如在诸如 System.Collections.ArrayList 的非泛型集合类中）。 可通过使用泛型集合（例如 System.Collections.Generic.List<T>）来避免装箱值类型。 装箱和取消装箱过程需要进行大量的计算。 对值类型进行装箱时，必须创建一个全新的对象。 这可能比简单的引用赋值用时最多长 20 倍。 取消装箱的过程所需时间可达赋值操作的四倍。 有关详细信息，请参阅装箱和取消装箱。</p>
 </blockquote>
